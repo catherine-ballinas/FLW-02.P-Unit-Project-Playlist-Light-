@@ -69,9 +69,18 @@ function emptyDisplay() {
 function displaySongInfo() {
 
   // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-
-
-
+for (let i = 0; i <= image.length; i++) {
+  body.insertAdjacedntHTML('beforeend', `Image, ${image[i]}`)
+}
+for (let i = 0; i <= songName.length; i++) {
+  body.insertAdjacentHTML('beforeend', `Song, ${songName[i]}` )
+}
+for (let i = 0; i <= artists.length; i++) {
+  body.insertAdjacentHTML('beforeend', `Artist ${artists[i]}`)
+}
+for (let i = 0; i <= songLinks.length; i++) {
+  body.insertAdjacentHTML('beforeend', `Song Link, ${songLink[i]}`)
+}
 }
 
 
