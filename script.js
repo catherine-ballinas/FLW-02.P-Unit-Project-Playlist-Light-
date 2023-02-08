@@ -12,10 +12,10 @@ let add = document.querySelector(".add");
 
 
 // task 6: declare variables for your display divs: the image url, song name, artist, and song link. Go back to the HTML to check that you are using the correct class names.
-let image = document.querySelector(".image")
-let songName = document.querySelector(".song-name")
-let artist = document.querySelector(".artist")
-let songLink = document.querySelector(".song-link")
+let displayImage = document.querySelector(".display-image")
+let displaySongName = document.querySelector(".display-song")
+let displayArtists = document.querySelector(".display-artist")
+let displaySongLink = document.querySelector(".display-song")
 
 // task 7: create and populate an array to store your image urls. Create three more arrays. One to store your song names, one for the artists, and a last one for the song links.
 let image = ["https://downloads-pearljam-com.s3.amazonaws.com/img/album-art/0223194511vs.jpg", "https://upload.wikimedia.org/wikipedia/en/c/cd/Garbage-the_world_is_not_enough_cover.jpg", "https://www.metallica.com/on/demandware.static/-/Sites-Metallica-Library/default/dw28fadafa/images/releases/20150807_215617_7549_752895.jpeg", "https://i.scdn.co/image/ab67616d0000b273fbf304074b2b73ec843afad6", "https://images.genius.com/95894373ccc5aa5a6428b521bf793fef.1000x1000x1.jpg"]
@@ -46,8 +46,10 @@ console.log(songLink);
 function addSongInfo() {
 
   // task 9: declare a variable to save the user input of the image url. Declare three more variables that save user input: One for the song names, one for the artists, and a last one for the song links.
-
-
+  let image
+  let songName
+  let artists
+  let songLink
   // task 10: use `.push()` to add each input value to the correct array.
 
 }
@@ -69,18 +71,18 @@ function emptyDisplay() {
 function displaySongInfo() {
 
   // task 8: loop through your images array and display the images to your songs in the correct div. Create three more loops. One for the song names, one for the artists, and a last one for the song links.
-for (let i = 0; i <= image.length; i++) {
-  body.insertAdjacedntHTML('beforeend', `Image, ${image[i]}`)
-}
-for (let i = 0; i <= songName.length; i++) {
-  body.insertAdjacentHTML('beforeend', `Song, ${songName[i]}` )
-}
-for (let i = 0; i <= artists.length; i++) {
-  body.insertAdjacentHTML('beforeend', `Artist ${artists[i]}`)
-}
-for (let i = 0; i <= songLinks.length; i++) {
-  body.insertAdjacentHTML('beforeend', `Song Link, ${songLink[i]}`)
-}
+  for (let i = 0; i <= image.length; i++) {
+    displayImage.insertAdjacentHTML('beforeend', `Image, ${image[i]}`)
+  }
+  for (let i = 0; i <= songName.length; i++) {
+    displaySongName.insertAdjacentHTML('beforeend', `Song, ${songName[i]}`)
+  }
+  for (let i = 0; i <= artists.length; i++) {
+    displayArtists.insertAdjacentHTML('beforeend', `Artist ${artists[i]}`)
+  }
+  for (let i = 0; i <= songLinks.length; i++) {
+    displaySongLink.insertAdjacentHTML('beforeend', `Song Link, ${songLink[i]}`)
+  }
 }
 
 
